@@ -1,5 +1,8 @@
 #!/bin/bash
 
+[ -d build ] || mkdir build
+cd build
+
 export DEBIAN_FRONTEND=noninteractive
 
 echo "upgrade all packages"
@@ -37,12 +40,12 @@ cd gnome-commander-${GC_VERSION}
 make
 
 echo "build gnome-commander package"
-checkinstall --install=no --pkgname=gnome-commander --pkgversion=${GC_VERSION} --pkggroup=Application/Accessories
+checkinstall -y --install=no --pkgname=gnome-commander --pkgversion=${GC_VERSION} --pkggroup=Application/Accessories
 echo "move .deb file one folder up"
 mv gnome-commander_${GC_VERSION}-1_amd64.deb ../
 
 cd ..
-echo "download libgnomevfs, these need to be installed on the target host along the gnome-commander"
+echo "download libgnomevfs .deb files, these need to be installed on the target host along with the gnome-commander"
 apt-get download libgnomevfs2-0 libgnomevfs2-common
 
 ## install dependencies:

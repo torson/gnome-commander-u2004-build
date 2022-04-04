@@ -1,16 +1,15 @@
-Build Gnome-commander for Ubuntu 20.04 Focal using Docker.
-You need to have Docker installed, that's the only requirement.
-You can run this on any Linux distribution.
+This builds Gnome-commander for Ubuntu 20.04 Focal using Docker.
 
 It's based on instructions from the Gnome-commander page:
 https://gcmd.github.io/2021/01/28/Build-on-Ubuntu-2004.html
 
-It builds Gnome-commander v1.12.3.1 .
+It builds version `1.12.3.1` .
 
 # Steps
 
 ### 1. Start and get into the Ubuntu 20.04 Focal container.
-This will mount the current path where the deb packages will be available at the end:
+This will mount the current path where the deb packages will be available at the end inside the `build` folder.
+With using `--rm` the container and all it's content will be removed after you exit.
 
 ```
 docker run --rm -it -v $(pwd):/mount -w /mount ubuntu:focal
@@ -22,7 +21,7 @@ docker run --rm -it -v $(pwd):/mount -w /mount ubuntu:focal
 ./build.sh
 ```
 
-3 .deb file files should now be in the current path:
+3 .deb file files should now be inside the `build` folder:
 - libgnomevfs2-common_1%3a2.24.4-6.1ubuntu2_amd64.deb
 - libgnomevfs2-0_1%3a2.24.4-6.1ubuntu2_amd64.deb
 - gnome-commander_1.12.3.1-1_amd64.deb
