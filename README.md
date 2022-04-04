@@ -9,14 +9,14 @@ It builds Gnome-commander v1.12.3.1 .
 
 # Steps
 
-1. Start and get into the Ubuntu 20.04 Focal container.
+### 1. Start and get into the Ubuntu 20.04 Focal container.
 This will mount the current path where the deb packages will be available at the end:
 
 ```
 docker run --rm -it -v $(pwd):/mount -w /mount ubuntu:focal
 ```
 
-2. Inside the container run:
+### 2. Inside the container run:
 
 ```
 ./build.sh
@@ -28,7 +28,7 @@ docker run --rm -it -v $(pwd):/mount -w /mount ubuntu:focal
 - gnome-commander_1.12.3.1-1_amd64.deb
 
 
-3. Copy the 3 files over to the target host (Ubuntu 20.04) and install them:
+### 3. Copy the 3 files over to the target host (Ubuntu 20.04) and install them:
 
 ```
 # first install the libgnomevfs packages
