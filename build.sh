@@ -59,4 +59,4 @@ apt-get download libgnomevfs2-0 libgnomevfs2-common
 # apt-get -y install libc6 libexiv2-27 libgcc1 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk2.0-0 libpango-1.0-0 libpoppler-glib8 libpython2.7 libstdc++6 libtag1v5
 
 # install gnome-commander
-# apt-get install gnome-commander_1.10.3-1_amd64.deb
+# dpkg -i gnome-commander_1.12.3.1-1_amd64.deb
