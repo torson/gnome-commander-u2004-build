@@ -5,6 +5,12 @@ https://gcmd.github.io/2021/01/28/Build-on-Ubuntu-2004.html
 
 It builds version `1.12.3.1` .
 
+Gnome-commander links:
+https://gitlab.gnome.org/GNOME/gnome-commander
+https://github.com/GNOME/gnome-commander
+https://gcmd.github.io/
+https://github.com/GNOME/gnome-commander/blob/master/NEWS
+
 # Steps
 
 ### 1. Start and get into the Ubuntu 20.04 Focal container.
